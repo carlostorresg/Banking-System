@@ -1,4 +1,4 @@
-""" bank account """
+
 
 class BankAccount:
 
@@ -31,6 +31,7 @@ class BankAccount:
         
     
     def display_transactions(self):
+        '''List with all your transactions made'''
         
         return "\n".join(self.transactions)
             
