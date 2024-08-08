@@ -9,6 +9,7 @@ class BankAccount:
         
 
     def deposit(self,amount):
+       
         print(f"{self.name} {amount} was added to your bank account, your new balance is {self.balance + amount}")
         self.balance += amount 
         transaction = f"you deposit {amount} to your account"
@@ -18,7 +19,8 @@ class BankAccount:
         
     def withdraw(self,amount):
         if amount > self.balance:
-            return print("Insfucient fonds ")
+             print("Insfucient fonds ")
+             return self.balance
         else:
             
             print(f"{self.name} {amount} was withdeaw from your bank account, your new balance is {self.balance - amount}")
@@ -39,9 +41,5 @@ class BankAccount:
 
 account = BankAccount("carlos")
 
-account.deposit(400)
-account.deposit(200)
-account.withdraw(25)
 
-print(account.display_transactions())
 
