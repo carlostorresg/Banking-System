@@ -8,21 +8,25 @@ class CheckingAccount(BankAccount):
         
 
     
-    def withdraw_overdraft(self,amount,overdraft=100):
-
+    def withdraw_od(self,amount,overdraft=100):
+        '''
+        Withdrawing with an overdraft limit of 100 
+        '''
+        withdraw = amount
         
-        if self.balance + overdraft > amount:
-            self.balance -= amount
-            print(f"You withdraw {amount} from your card ")
-            transaction = f'You withdraw {amount} from your card'
+        if self.balance + overdraft >= withdraw:
+            self.balance -= withdraw
+            print(f"You withdraw {withdraw} from your card ")
+            transaction = f'You withdraw {withdraw} from your card'
             self.transactions.append(transaction)
-            return self.balance
-
-
-
-carlos = CheckingAccount("carlos")
-carlos.withdraw_overdraft(20)
+            return withdraw
         
+        else:
+            print("Insuficient fonds ")
+
+
+
+
 
 
 
