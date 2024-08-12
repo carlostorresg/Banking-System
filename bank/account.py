@@ -2,7 +2,7 @@
 
 class BankAccount:
 
-    def __init__(self,name,):
+    def __init__(self,name):
         self.name = name 
         self.balance = 0.00
         self.transactions = []
@@ -42,5 +42,6 @@ class BankAccount:
 
 account = BankAccount("carlos")
 
+account.deposit(100)
 
 
