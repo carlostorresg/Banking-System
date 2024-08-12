@@ -11,11 +11,13 @@ class SavingsAccount(BankAccount):
      self.interest = interest
      
 
+    
     def apply_interest(self):
        '''
        Deposits the interest 
        '''
        interest = self.balance * self.interest
        self.deposit(interest)
+       
        return interest
 
